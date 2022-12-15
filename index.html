@@ -1,4 +1,133 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   
+<style>
+
+</style>
+
+</head>
+<body ng-app="myApp">
+
+<!-- ============================================== VIEW ================================================== -->
+    <div ng-view></div>
+
+
+
+  
+  <marquee direction="up" scrollamount="7">
+    <section style="text-align:center; margin:10px auto;"><p>Designed by <a href="#">BoBu</a></p></section>
+  </marquee><hr>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function ($routeProvider){
+                $routeProvider
+                    .when("/", {templateUrl: "content/home/home.html"})
+                    .when("/product", {templateUrl: "content/product/product.html"})
+
+
+                    // blog page
+                    .when("/bLog", {templateUrl: "home/blog.html"})
+                    .when("/blogPage1", {templateUrl: "home/blog.page/Page1.html"})
+                    .when("/blogPage2", {templateUrl: "home/blog.page/Page2.html"})
+                    .when("/blogPage3", {templateUrl: "home/blog.page/Page3.html"})
+                    .when("/blogPage4", {templateUrl: "home/blog.page/Page4.html"})
+                    .when("/blogPage5", {templateUrl: "home/blog.page/Page5.html"})
+                    .when("/blogPage6", {templateUrl: "home/blog.page/Page6.html"})
+                    .when("/blogPage7", {templateUrl: "home/blog.page/Page7.html"})
+                    .when("/blogPage8", {templateUrl: "home/blog.page/Page8.html"})
+                    .when("/blogPage9", {templateUrl: "home/blog.page/Page9.html"})
+                    .when("/blogPage10", {templateUrl: "home/blog.page/Page10.html"})
+                    .when("/blogPage11", {templateUrl: "home/blog.page/Page11.html"})
+                    .when("/blogPage12", {templateUrl: "home/blog.page/Page12.html"})
+                    .when("/allBlog", {templateUrl: "home/allBlog.html"})
+            });
+            app.controller("myController",function($scope, $http){
+                    $http.get("list.json").then(function(response){
+                        $scope.myData = response.data.list2;
+                        $scope.list = {};
+                    });
+                  });
+
+            </script>
+    
+</body>
+</html>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,11 +151,11 @@
         @keyframes game{
             0%{background-color: aquamarine;left: 20px;top: 0px}
             12%{background-color: rgb(219, 127, 255);left: 160px;top: 0px}
-            /* 24%{background-color: rgb(255, 189, 127);left: 180px;top: 120px}
+            24%{background-color: rgb(255, 189, 127);left: 180px;top: 120px}
             36%{background-color: rgb(127, 142, 255);left: 180px;top: 160px}
             48%{background-color: rgb(255, 127, 212);left: 160px;top: 180px}
             60%{background-color: rgb(255, 127, 212);left: 120px;top: 180px}
-            72%{background-color: rgb(255, 127, 212);left: 0px;top: 160px} */
+            72%{background-color: rgb(255, 127, 212);left: 0px;top: 160px}
             100%{background-color: rgb(255, 127, 212);left: 0px;top: 120px}
         }
     </style>
@@ -43,4 +172,4 @@
         }
     </script>
 </body>
-</html>
+</html> -->
