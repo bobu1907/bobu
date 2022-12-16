@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+ 
+.navv{
+ display: inline-flex;
+ position: relative;
+ overflow: hidden;
+ max-width: 100%;
+ background-color: white;
+ padding: 0 20px;
+ border-radius: 40px;
+ box-shadow: 0 10px 40px rgba(150, 174, 178, 0.8);
+ font-family: "Baloo Tammudu 2";
+ }
+.navv-item{
+ color: #83818c;
+ padding: 20px;
+ text-decoration: none;
+ transition: 0.3s;
+ margin: 0 7px;
+ z-index: 1;
+ position: relative;
+ }
+ .navv-item:before{
+     content: '';
+     position: absolute;
+     bottom: -7px;
+     left: 0px;
+     width: 100%;
+     height: 5px;
+     background-color: #dfe2ea;
+     border-radius: 8px 8px 0 0;
+     opacity: 0;
+     transition: 0.3s;
+ }
+.navv-item:not(.is_active):hover:before{
+     opacity: 1;
+     bottom:0;
+ }
+.navv-item:not(.is-active):hover{
+     color: #333;
+ }
+.navv-indicator{
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 4px;
+     transition: 0.4s;
+     height: 5px;
+     z-index: 1;
+     border-radius: 8px 8px 0 0;
+ }
+    </style>
+</head>
+<body>
+    <nav class="navv">
+        <a href="#" class="navv-item is-active" active-color="DarkSlateBlue">Trang Chủ</a>
+        <a href="#" class="navv-item" active-color="DarkKhaki">Về Chúng Tôi</a>
+        <a href="#" class="navv-item" active-color="DeepPink">Liên Hệ</a>
+        <a href="#" class="navv-item" active-color="LimeGreen">Dự Án</a>
+        <span class="navv-indicator"></span>
+  </nav>
+</body>
+</html>
