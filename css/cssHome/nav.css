@@ -1,0 +1,40 @@
+.nav{
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(150, 174, 178, 0);
+    }
+   .nav-item{
+    color: #f6fff9;
+    padding: 20px;
+    text-decoration: none;
+    transition: 1s;
+    margin: 0 7px;
+    z-index: 1;
+    position: relative;
+    }
+    .nav-item:before{
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 0px;
+        width: 100%;
+        height: 5px;
+        background-color: hsl(126, 100%, 96%);
+        border-radius: 8px 8px 0 0;
+        opacity: 0;
+        transition: 0.3s;
+    }
+   .nav-item:hover:before{
+        opacity: 1;
+        bottom:0;
+   
+    }
+    .nav-item:hover{
+       font-size: 30px;
+       color: rgb(255, 255, 255);
+    }
