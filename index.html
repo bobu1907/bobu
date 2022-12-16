@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="css/cssHeader/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
+
+    
     <script src="angular.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -23,32 +18,122 @@
 
    
 <style>
-
+.navv{
+ display: inline-flex;
+ position: relative;
+ overflow: hidden;
+ max-width: 100%;
+ background-color: white;
+ padding: 0 20px;
+ border-radius: 40px;
+ box-shadow: 0 10px 40px rgba(150, 174, 178, 0.8);
+ font-family: "Baloo Tammudu 2";
+ }
+.navv-item{
+ color: #83818c;
+ padding: 20px;
+ text-decoration: none;
+ transition: 0.3s;
+ margin: 0 7px;
+ z-index: 1;
+ position: relative;
+ }
+ .navv-item:before{
+     content: '';
+     position: absolute;
+     bottom: -7px;
+     left: 0px;
+     width: 100%;
+     height: 5px;
+     background-color: #dfe2ea;
+     border-radius: 8px 8px 0 0;
+     opacity: 0;
+     transition: 0.3s;
+ }
+.navv-item:not(.is_active):hover:before{
+     opacity: 1;
+     bottom:0;
+ }
+.navv-item:not(.is-active):hover{
+     color: #333;
+ }
+.navv-indicator{
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 4px;
+     transition: 0.4s;
+     height: 5px;
+     z-index: 1;
+     border-radius: 8px 8px 0 0;
+ }
 </style>
 
-</head>
+</head> 
 <body ng-app="myApp">
+
+<!-- ============================================== header ================================================== -->
+<div style="position: fixed;top: 0;right: 0;bottom: 0;left: 0;">
+    <nav class="navv">
+        <a href="#" class="navv-item is-active" active-color="DarkSlateBlue">Trang Chủ</a>
+        <a href="#" class="navv-item" active-color="DarkKhaki">Về Chúng Tôi</a>
+        <a href="#" class="navv-item" active-color="DeepPink">Liên Hệ</a>
+        <a href="#" class="navv-item" active-color="LimeGreen">Dự Án</a>
+        <span class="navv-indicator"></span>
+  </nav>
+</div>
+
+<div class="header-row">
+    <div class="header-row-inside">
+
+        <h1 class="shopName">Shop Name</h1>
+        <div class="header-row__button">
+            <a href="#" class="btn"></a>
+        </div>
+    </div>
+</div>
+
+<div class="page-content">
+    hello u want tell me somethink
+</div>
+<div class="page-content">
+    hello u want tell me somethink
+</div>
+<div class="page-content">
+    hello u want tell me somethink
+</div>
+<!-- ======================================= NAVIGATION BAR ============================================================= -->
+
+
+
+
+
 
 <!-- ============================================== VIEW ================================================== -->
     <div ng-view></div>
+<!-- ============================================== VIEW ================================================== -->
 
 
 
-  
+
+
+<!-- ============================================== footer ================================================== -->
+
+
+<!-- ============================================== footer ================================================== -->
+
+
+
+
+
+
+
+
+<div>  
   <marquee direction="up" scrollamount="7">
     <section style="text-align:center; margin:10px auto;"><p>Designed by <a href="#">BoBu</a></p></section>
   </marquee><hr>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -84,10 +169,25 @@
                     });
                   });
 
-            </script>
+    var heroShinker = function() {
+    var hero = $('.header-row'),
+        heroHeight = $('.header-row').outerHeight(true);
+        $(hero).parent().css('padding-top', heroHeight);
+    $(window).scroll(function() {
+        var scrollOffset = $(window).scrollTop();
+        if (scrollOffset < heroHeight) {
+            $(hero).css('height', (heroHeight - scrollOffset));
+        }
+        if (scrollOffset > (heroHeight - 215)) {
+            hero.addClass('fixx');
+        } else {
+            hero.removeClass('fixx');
+        };
+    });
+}
+heroShinker();
+</script>
     
-</body>
-</html>
 </body>
 </html>
 
