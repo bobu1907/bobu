@@ -8,9 +8,9 @@
 
     <link rel="stylesheet" href="css/cssHome/footer.css">
     <link rel="stylesheet" href="css/cssHome/header.css">
+    <link rel="stylesheet" href="css/cssHome/nav.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
 
-    
     <script src="angular.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -19,46 +19,7 @@
 
    
 <style>
-.nav{
- display: inline-flex;
- position: relative;
- overflow: hidden;
- max-width: 100%;
- background-color: rgb(255, 255, 255);
- padding: 0 20px;
- border-radius: 40px;
- box-shadow: 0 10px 40px rgba(150, 174, 178, 0);
- }
-.nav-item{
- color: #f6fff9;
- padding: 20px;
- text-decoration: none;
- transition: 1s;
- margin: 0 7px;
- z-index: 1;
- position: relative;
- }
- .nav-item:before{
-     content: '';
-     position: absolute;
-     bottom: -7px;
-     left: 0px;
-     width: 100%;
-     height: 5px;
-     background-color: hsl(126, 100%, 96%);
-     border-radius: 8px 8px 0 0;
-     opacity: 0;
-     transition: 0.3s;
- }
-.nav-item:hover:before{
-     opacity: 1;
-     bottom:0;
 
- }
- .nav-item:hover{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
- }
 
 </style>
 
@@ -68,10 +29,10 @@
 <!-- ============================================== header ================================================== -->
 <div style="position: absolute;top: 0;right: 0;bottom: 0;left: 0;">
     <nav class="nav">
-        <a href="#!product" class="nav-item" style="text-decoration: none;" >Home</a>
+        <a href="#" class="nav-item" style="text-decoration: none;" >Home</a>
         <a href="#" class="nav-item" style="text-decoration: none;">AboutUs</a>
-        <a href="#" class="nav-item" style="text-decoration: none;">contacts</a>
-        <a href="#" class="nav-item" style="text-decoration: none;">ePro</a>
+        <a href="#!product" class="nav-item" style="text-decoration: none;">contacts</a>
+        <a href="#!product" class="nav-item" style="text-decoration: none;">ePro</a>
         <span class="nav-indicator"></span>
   </nav>
 </div>
@@ -114,69 +75,6 @@
 
 <!-- ============================================== footer ================================================== -->
 
-    <footer class="footer-bs">
-        <div class="row">
-          <div class="col-md-3 footer-brand animated fadeInLeft">
-              <h2>Logo</h2>
-                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-                <p>© 2022 GP2 UI Kit, All rights reserved</p>
-            </div>
-          <div class="col-md-4 footer-nav animated fadeInUp">
-              <h4>Menu —</h4>
-              <div class="col-md-6">
-                    <ul class="pages">
-                        <li><a href="#">Children</a></li>
-                        <li><a href="#">Adult</a></li>
-                  
-                        <li><a href="#">Female</a></li>
-                        <li><a href="#">male</a></li>
-                        <li><a href="#!b">SALE</a></li>
-                        <li><a href="#!bLog">Blog</a></li>
-                        <li><a href="tym.html">INDIA</a></li>
-  
-                    </ul>
-                </div>
-              <div class="col-md-6">
-                    <ul class="list">
-                        <li><a href="#!allAbout">About us</a></li>
-                        <li><a href="#!c">Contacts</a></li>
-                        <li><a href="#">Terms & Condition</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-          <div class="col-md-2 footer-social animated fadeInDown">
-              <h4>Follow Us</h4>
-              <ul class="icon">
-                  <li><a href="https://www.facebook.com/paperkawaii"><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a></li> 
-                  <li><a href="https://twitter.com/suzukiorigami"><ion-icon name="logo-twitter" style="color:cornflowerblue"></ion-icon></a></li>
-                  <li><a href="https://www.instagram.com/origami_bubbles/"><ion-icon name="logo-instagram" style="color:	#FF99FF"></ion-icon></a></li>
-                  <li><a href="https://www.youtube.com/@jonakashima"><ion-icon name="logo-youtube" style="color:#FF3333"></ion-icon></a></li>
-                    
-                  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-                </ul>
-            </div>
-          <div class="col-md-3 footer-ns animated fadeInRight">
-              <h4>F E E D B A C K</h4>
-                <p>If you have any feedback for us? Please, tell us so we can improve your experience again on your next visit</p>
-  
-                <br><br>
-                <p>
-                  <a href="mailto:Origami@gmail.com?subject=feedback">
-                    <div class="input-group">
-                      
-                      <span class="input-group-btn">
-                    
-                        <button class="btn btn-default" type="button" style="height:50px;width:300px;"><span class="glyphicon glyphicon-envelope"></span></button>
-                      </span>
-                    </div>
-  
-                  </a><br>
-                    <!-- /input-group -->
-                 </p>
-            </div>
-        </div>
-    </footer>
 <!-- ============================================== footer ================================================== -->
 
 
@@ -200,7 +98,7 @@
             app.config(function ($routeProvider){
                 $routeProvider
                     .when("/", {templateUrl: "content/home/home.html"})
-                    .when("/product", {templateUrl: "content/product/product.html"})
+                    .when("/b", {templateUrl: "content/product/product.html"})
 
             });
             app.controller("myController",function($scope, $http){
@@ -210,7 +108,7 @@
                     });
                   });
 
-    var heroShinker = function() {
+    var heroShinker = function(){
     var hero = $('.header-row'),
         heroHeight = $('.header-row').outerHeight(true);
         $(hero).parent().css('padding-top', heroHeight);
