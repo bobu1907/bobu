@@ -16,6 +16,7 @@
     margin: 0 7px;
     z-index: 1;
     position: relative;
+
     }
     .nav-item:before{
         content: '';
