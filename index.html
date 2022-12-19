@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/cssHome/footer.css">
+    <link rel="stylesheet" href="css/cssHome/box.css">
     <link rel="stylesheet" href="css/cssHome/header.css">
     <link rel="stylesheet" href="css/cssHome/nav.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
@@ -19,8 +20,17 @@
 
    
 <style>
-
-
+    #blured span a img{filter: grayscale(50%) blur(1px);transition:0.5s;height:100px; width:100px;border-radius:100px;}
+    #blured span a img:hover{filter: grayscale(0%) blur(0px);transition: 0.3s;height:500px; width:100%;}
+    #blured h2{font-size:180px; color: rgb(0, 0, 0);text-align:center;transition:0.5s;height:100%;padding-top:200px;}
+    #blured h2:hover{font-size:0px;transition:0.5s;padding-bottom:100px;}
+.page-content{
+    text-align: center;
+    line-height: 60;
+    border-color: blueviolet;
+    border-style: solid;
+    
+}
 </style>
 
 </head> 
@@ -37,21 +47,44 @@
   </nav>
 </div>
 
+
 <div class="header-row">
     <div class="header-row-inside">
 
-        <h1 class="shopName">Shop Name</h1>
+        <h1 class="shopName">BOBU SHOP</h1>
         <div class="header-row__button">
             <a href="#" class="btn"></a>
         </div>
     </div>
 </div>
 
+
 <div class="page-content">
-    hello u want tell me somethink
+    <div id="bigbox">
+        <div id="box">
+          <img id="imgBox" src="img/imgHeader/download.jpg">
+          <span style = "font-family:courier,arial,helvetica;">Hard</span>
+        </div>
+        <div id="box">
+          <img id="imgBox" src="img/imgHeader/download.jpg">
+          <span style = "font-family:courier,arial,helvetica;">Medium</span>
+        </div>
+        <div id="box">
+          <img id="imgBox" src="img/imgHeader/download.jpg">
+          <span style = "font-family:courier,arial,helvetica;">Easy</span>
+        </div>
+      </div>
 </div>
 <div class="page-content">
-    hello u want tell me somethink
+    <div id="blured" style="width:100%;height:700px;">
+        <h2># 𝕗 
+            <span>
+                    <a href="#" style="width:100%;height:100%;">
+                        <img src="img/imgHeader/header.png"  >
+                    </a>
+            </span>
+            𝕦 𝕟 𝕕 𝕖 𝕣</h2>
+        </div>
 </div>
 <div class="page-content">
     hello u want tell me somethink
@@ -60,7 +93,13 @@
 
 <!-- ======================================= NAVIGATION BAR ============================================================= -->
 
+<div id="bigbox">
+    <div id="box">
+      <img id="imgBox" src="img/imgHeader/download.jpg">
+      <span style = "font-family:courier,arial,helvetica;">Hard</span>
+    </div>
 
+  </div>
 
 
 
